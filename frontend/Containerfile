@@ -1,0 +1,17 @@
+# Use Red Hat Nginx base image
+FROM registry.access.redhat.com/ubi10/nginx-126:10.0
+
+# Set working directory
+WORKDIR /opt/app-root/src
+
+# Copy static files
+COPY index.html /opt/app-root/src/index.html
+COPY nginx.conf /opt/app-root/etc/nginx/nginx.conf
+
+# Expose port 8080
+EXPOSE 8080
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
+
+
