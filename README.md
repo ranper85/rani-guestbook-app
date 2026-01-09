@@ -77,7 +77,7 @@ A `latest` tag is also published for reference.
 4. Images are pushed to the container registry
 5. The deployment repository is updated with the new image tags
 
-After this step, Argo CD handles the deployment automatically.
+After this step, Argo CD manages the deployment automatically.
 
 
 
